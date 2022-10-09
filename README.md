@@ -1,4 +1,4 @@
-[![Build, test, and publish Docker Images](https://github.com/aspirina765/scraper-spark-notebook/actions/workflows/docker.yml/badge.svg)](https://github.com/aspirina765/scraper-spark-notebook/actions/workflows/docker.yml)
+[![Build, test, and publish Docker Images](https://github.com/ratoloko765/scraper-spark-notebook/actions/workflows/docker.yml/badge.svg)](https://github.com/ratoloko765/scraper-spark-notebook/actions/workflows/docker.yml)
 
 # scraper-spark-notebook
 scraper-spark-notebook is a community maintained Jupyter Docker Stack image that aims to provide an environment suitable for web scraping development - including web driver, requests and others (see Dockerfile for details)
@@ -7,19 +7,19 @@ scraper-spark-notebook is a community maintained Jupyter Docker Stack image that
 Run like any standard JupyterLab docker noteboooks:
 
 ```
-docker run -p8888:8888 aspirina765/scraper-spark-notebook
+docker run -p8888:8888 ratoloko765/scraper-spark-notebook
 ```
 
 Or with persistent storage and as a Daemon:
 
 ```
-docker run -p8888:8888 -d -v ~/notebook:/home/jovyan/work aspirina765/scraper-spark-notebook
+docker run -p8888:8888 -d -v ~/notebook:/home/jovyan/work ratoloko765/scraper-spark-notebook
 ```
 
 If you are having issues with web driver scraper and "big" pages, set the shm size:
 
 ```
-docker run -p8888:8888 -d -v ~/notebook:/home/jovyan/work --shm-size=512mb  aspirina765/scraper-spark-notebook
+docker run -p8888:8888 -d -v ~/notebook:/home/jovyan/work --shm-size=512mb  ratoloko765/scraper-spark-notebook
 ```
 
 Or yet with a Docker compose file:
@@ -27,7 +27,7 @@ Or yet with a Docker compose file:
 version: "3"
 services:
   scraper-spark-notebook:
-    image: aspirina765/scraper-spark-notebook
+    image: ratoloko765/scraper-spark-notebook
     container_name: scraper-spark-notebook
     env_file:
       - .env
