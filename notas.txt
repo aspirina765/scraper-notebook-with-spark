@@ -1,0 +1,7 @@
+
+
+
+docker run -d -P --name notebook -v "${PWD}":/home/${NB_USER}/work jupyter/all-spark-notebook
+
+
+
