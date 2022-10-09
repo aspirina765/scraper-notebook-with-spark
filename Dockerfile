@@ -41,6 +41,6 @@ USER ${NB_UID}
 WORKDIR "${HOME}/jovyan/work"
 
 # IMPORTANT! Copy a directory back to docker's workdir! Take care!  # MODIFY ME
-COPY ../* ${HOME}/jovyan/work/
+#COPY ../* ${HOME}/jovyan/work/
 
 
