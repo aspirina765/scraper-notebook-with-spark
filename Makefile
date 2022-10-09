@@ -1,7 +1,7 @@
 .PHONY: help test
 
 # Docker image name and tag
-IMAGE:=ratoloko765/scraper-notebook
+IMAGE:=aspirina765765/scraper-spark-notebook
 TAG?=latest
 # Shell that make should use
 SHELL:=bash
