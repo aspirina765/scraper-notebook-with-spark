@@ -1,0 +1,13 @@
+version: "3"
+services:
+  scraper-spark-notebook:
+    image: ratoloko765/scraper-spark-notebook
+    container_name: scraper-spark-notebook
+    env_file:
+      - .env
+    ports:
+      - 8888:8888
+    volumes:
+      - ~/notebook:/home/jovyan/work
+    restart: unless-stopped
+    shm_size: '256mb'

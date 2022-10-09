@@ -18,7 +18,7 @@ help:
 
 
 build: DARGS?=
-build: ## Make the latest build of the image
+build: ## Make the latest build of the imagez
 	docker build $(DARGS) --rm --force-rm -t $(IMAGE):$(TAG) .
 
 
@@ -26,14 +26,16 @@ build: ## Make the latest build of the image
 dev: ARGS?=
 dev: DARGS?=
 dev: PORT?=8888
-dev: ## Make a container from a tagged image image (it gets one directory back as docker volume)
-	docker run -it --rm -p $(PORT):8888 $(DARGS)  -v "${PWD%/*}":/${HOME} $(IMAGE):$(TAG) $(ARGS)
+dev: ## Make a container from a tagged image image
+	docker run -it --rm -p $(PORT):8888 $(DARGS) $(IMAGE):$(TAG) $(ARGS)
+
+
 
 
 
 run: DARGS?=
-run: ## run a shell in interactive mode in a stack (it gets one directory back as docker volume)
-	docker run -it --rm $(DARGS) -v "${PWD%/*}":/${HOME} $(IMAGE):$(TAG) $(SHELL)
+run: ## run a shell in interactive mode in a stack
+	docker run -it --rm $(DARGS) $(IMAGE):$(TAG) $(SHELL)
 
 
 
